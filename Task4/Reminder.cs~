@@ -1,0 +1,30 @@
+using System;
+using System.Diagnostics;
+ 
+class ReminderOfTheDivisionByFive
+{
+    static void Main()
+    {
+        UInt32 firstNum = 0, secondNum = 0;
+ 
+        Console.Write("Enter first number: ");
+        bool b1 = UInt32.TryParse(Console.ReadLine(), out firstNum);
+ 
+        Console.Write("Enter second number: ");
+        bool b2 = UInt32.TryParse(Console.ReadLine(), out secondNum);
+ 
+        if (b1 && b2)
+		{
+            uint resultMax = Math.Max(firstNum, secondNum) / 5;
+            uint resultMin = (Math.Min(firstNum, secondNum) - 1) / 5;
+ 
+            uint result = resultMax - resultMin;
+
+            Console.WriteLine("p({0},{1}) = {2}", firstNum, secondNum, result);
+		}
+		else
+		{
+			Console.WriteLine("Not a valid positive integers!");
+		}
+	}
+}

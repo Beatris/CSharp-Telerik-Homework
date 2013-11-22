@@ -1,0 +1,19 @@
+using System;
+
+
+class circleArea
+{
+	static void Main()
+	{
+		Console.Write("Enter the radius of the circle: ");
+		string inputRadius = Console.ReadLine();
+		int radius = int.Parse(inputRadius);
+
+		double area = 3.14 * Math.Sqrt(radius);
+		double perimeter = 2 * 3.14 * radius;
+
+		Console.WriteLine("The area of the circle is {0} " + 
+		                  "and the perimeter is {1}", area, perimeter);
+	}
+}
+
